@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation>
+    <org-agents>
+        <agent name="building_manager" number="1" />
+        <agent name="scheduler" number="1" />
+        <agent name="monitor" number="1" />
+        <agent name="room_agent" number="9" />
+    </org-agents>
+    <user-agents>
+        <proposers>
+            <agent name="user_agent" number="10" />
+        </proposers>
+        <participants>
+            <agent name="participant" number="3" />
+        </participants>
+    </user-agents>
+    <sim-config>
+        <!-- specify duration in days -->
+        <day-duration>1</day-duration>
+
+        <room-management>
+
+            <!-- specify individual room data -->
+            <room-data>
+                <room id="1" format="amphi" seats="100" equipment="3, 12" />
+                <room id="2" format="amphi" seats="120" equipment="4, 13" />
+                <room id="3" format="lab" seats="18" equipment="5" />
+                <room id="4" format="lab" seats="18" equipment="6" />
+                <room id="5" format="common" seats="15" equipment="1, 14" />
+                <room id="6" format="office" seats="10" equipment="" />
+                <room id="7" format="office" seats="10" equipment="2" />
+                <room id="8" format="common" seats="15" equipment="15, 16" />
+                <room id="9" format="office" seats="6" equipment="7" />
+            </room-data>
+
+            <!-- specify the initial existing distribution of roles -->
+            <initial-assignment agent="room_agent1" group="teaching_group" room_id="1" />
+            <initial-assignment agent="room_agent2" group="teaching_group" room_id="2" />
+            <initial-assignment agent="room_agent3" group="teaching_group" room_id="3" />
+            <initial-assignment agent="room_agent4" group="teaching_group" room_id="4" />
+            <initial-assignment agent="room_agent5" group="meeting_group" room_id="5" />
+            <!--<initial-assignment agent="room_agent6" group="brainstorm_group" room_id="6" />-->
+            <initial-assignment agent="room_agent6" group="meeting_group" room_id="6" />
+            <initial-assignment agent="room_agent7" group="meeting_group" room_id="7" />
+            <initial-assignment agent="room_agent8" group="meeting_group" room_id="8" />
+            <initial-assignment agent="room_agent9" group="brainstorm_group" room_id="9" />
+
+        </room-management>
+
+        <request-management>
+            <!-- specify the desired number of events to be generated in the simulation -->
+            <!--
+            <teachingEvent number="6" distIntraDay="uniform" distInterDay="uniform" />
+            <meetingEvent number="90" distIntraDay="arithmeticIncrease" distInterDay="arithmeticIncrease" />
+            <brainstormEvent number="50" distIntraDay="arithmeticIncrease" distInterDay="arithmeticDecrease" />
+            -->
+            <!--
+            <teachingEvent number="6" distIntraDay="uniform" distInterDay="uniform" />
+            <meetingEvent number="76" distIntraDay="arithmeticDecrease" distInterDay="arithmeticIncrease" />
+            <brainstormEvent number="34" distIntraDay="arithmeticIncrease" distInterDay="arithmeticDecrease" />
+            -->
+            <!--
+            <teachingEvent number="30" distIntraDay="uniform" distInterDay="uniform" />
+            <meetingEvent number="36" distIntraDay="uniform" distInterDay="uniform" />
+            <brainstormEvent number="30" distIntraDay="uniform" distInterDay="uniform" />
+            -->
+            <teachingEvent number="10" distIntraDay="uniform" distInterDay="uniform" />
+            <meetingEvent number="16" distIntraDay="uniform" distInterDay="uniform" />
+            <brainstormEvent number="30" distIntraDay="uniform" distInterDay="uniform" />
+            
+        </request-management>
+    </sim-config>
+</simulation>

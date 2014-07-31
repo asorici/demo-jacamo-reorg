@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="arduinoartifact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="config" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="sensorlist" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="connection" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="options" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="connection">
+    <xs:complexType>
+      <xs:attribute name="host" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="port" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sensorlist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="sensor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sensor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="sensoroptions" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="operation"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="operation">
+    <xs:complexType>
+      <xs:attribute name="cardinality" use="required" type="xs:integer"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="valuename" use="required" type="xs:NCName"/>
+      <xs:attribute name="valuetype" use="required" type="sensorvaluetuple"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="sensorvaluetype">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="int" />
+      <xs:enumeration value="float" />
+      <xs:enumeration value="boolean" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sensorvaluetuple">
+    <xs:restriction>
+      <xs:simpleType>
+        <xs:list>
+          <xs:simpleType>
+            <xs:restriction base="sensorvaluetype"/>
+          </xs:simpleType>
+        </xs:list>
+      </xs:simpleType>
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:attribute name="readfreq" use="required" type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="sensoroptions">
+    <xs:complexType>
+      <xs:attribute name="readfreq" use="required" type="xs:integer" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

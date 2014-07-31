@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoartifact>
+    <config>
+        <connection host="192.168.1.1" port="80" />
+        <options readfreq="1000" />
+    </config>
+    <sensorlist>
+        <sensor name="utilities">
+            <sensoroptions readfreq="1000" />
+            <operation name="queryUtilitiesOn" type="GET" valuename="onstate" cardinality="1" valuetype="boolean" />
+            <operation name="setUtilitiesOn" type="SET" valuename="onstate" cardinality="1" valuetype="boolean" />
+        </sensor>
+    </sensorlist>
+</arduinoartifact>

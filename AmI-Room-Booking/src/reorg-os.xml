@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organisational-specification 
+    id="reorganization_group"
+    os-version="0.8"
+  
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os
+                        http://moise.sourceforge.net/xml/os.xsd'>
+    
+    <structural-specification>
+        <role-definitions>
+            <role id="reorg" />
+            <role id="org_manager" />
+            <role id="monitored" />
+            
+            <role id="selector">    <extends role="reorg"/>     </role>
+            <role id="historian">   <extends role="reorg"/>     </role>
+            <role id="designer">    <extends role="reorg"/>     </role>
+            <role id="org_participant">     <extends role="designer"/>  </role>
+            
+            <role id="monitor">     <extends role="reorg"/>     </role>
+            <role id="reorg_expert">        <extends role="designer"/>  </role>
+            
+        </role-definitions>
+        
+        <group-specification id="reorg_group">
+            <roles>
+                <role id="selector"   min="1" max="1" />
+                <role id="historian"  min="1" max="1" />
+                <role id="org_manager" min="1" max="1" />
+                <role id="org_participant" min="1" />
+                <role id="monitor" min="1" />
+                <role id="reorg_expert" />
+            </roles>
+
+            <!--
+            <links>
+                <link from="org_manager" to="soc" type="authority" scope="intra-group" extends-sub-groups="false" bi-dir="false"/>
+                <link from="reorg" to="org_manager" type="communication" scope="intra-group" extends-sub-groups="false" bi-dir="false"/>
+                <link from="monitor" to="monitored" type="authority" scope="inter-group" extends-sub-groups="false" bi-dir="false"/>
+                <link from="reorg" to="reorg" type="communication" scope="intra-group" extends-sub-groups="false" bi-dir="false"/>
+            </links>
+            -->
+            
+            <formation-constraints>
+                <compatibility from="soc" to="org_participant" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="soc" to="org_participant" type="compatibility" scope="inter-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="org_manager" to="historian" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="org_manager" to="selector" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="org_manager" to="designer" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="monitor" to="selector" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="monitor" to="historian" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                <compatibility from="selector" to="historian" type="compatibility" scope="intra-group" extends-sub-groups="false" bi-dir="true"/>
+                
+            </formation-constraints>
+        </group-specification>
+    </structural-specification>
+    
+    <functional-specification>
+        <scheme id="reorganization" >
+            <goal id="reorganization">
+                <plan operator="sequence" >
+                    <goal id="monitoring">
+                        <plan operator="choice">
+                            <goal id="monitor_requests">
+                                <plan operator="choice">
+                                    <goal id="monitor_request_trend_growing" min="1" />
+                                    <goal id="monitor_request_trend_dropping" min="1" />
+                                </plan>
+                            </goal>
+                            
+                            <goal id="monitor_energy" min="1" />
+                        </plan>
+                    </goal>
+
+                    <goal id="design">
+                        <plan operator="sequence" >
+                            <goal id="invitation" />
+                            <goal id="wait_des">
+                                <plan operator="parallel" >
+                                    <goal id="expert_des" />
+                                    <goal id="practice_des" min="1" />
+                                </plan>
+                            </goal>
+                        </plan>
+                    </goal>
+                    
+                    <goal id="selection" />
+
+                    <goal id="implementation" >
+                        <plan operator="sequence">
+                            <goal id="stop_current_mas" />
+                            <goal id="change_mas" />
+                            <goal id="instantiate_new_mas" />
+                        </plan>
+                    </goal>
+                </plan>
+            </goal>
+            
+            <mission id="m1" min="1">
+                <goal id="practice_des" />
+                <goal id="invitation"/>
+                <!-- <goal id="implementation" /> -->
+                <goal id="stop_current_mas" />
+                <goal id="change_mas" />
+                <goal id="instantiate_new_mas" />
+                
+                <!-- <goal id="design" /> -->
+                <!-- <goal id="wait_des" /> -->
+            </mission>
+            <mission id="m2" min="1">
+                <!-- <goal id="monitoring"/> -->
+                <goal id="monitor_request_trend_growing" />
+                <goal id="monitor_request_trend_dropping" />
+                <goal id="monitor_energy" />
+                
+            </mission>
+            <mission id="m4">
+                <goal id="expert_des"/>
+            </mission>
+            <mission id="m5">
+                <goal id="practice_des" />
+                <preferred mission="m2" />
+            </mission>
+            <mission id="m6" min="1">
+                <goal id="selection"/>
+            </mission>
+        </scheme>
+    </functional-specification>
+    
+    <normative-specification>
+        <norm id="org_manager_obligation" type="obligation" role="org_manager"     mission="m1" />
+        <!--<norm id="org_manager_design" type="obligation" role="org_manager"     mission="m5" />-->
+        <!-- <norm id="org_participant_obligation" type="obligation" role="org_participant" mission="m5" /> -->
+        <norm id="org_participant_monitoring" type="obligation" role="org_participant" mission="m2" />
+        <norm id="monitor_obligation" type="obligation" role="monitor"        mission="m2" />
+        <norm id="selector_obligation" type="obligation" role="selector"       mission="m6" />
+        <norm id="reorg_expert_obligation" type="obligation" role="reorg_expert"    mission="m4" />
+    </normative-specification>
+</organisational-specification>
+

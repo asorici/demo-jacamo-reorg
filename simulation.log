@@ -1,0 +1,298 @@
+INFO - [ 1-8-3][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent9",teachingEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",amphi,60,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-3][user_agent2] I have booked event: (Event:0 type:teachingEvent title:TeachingEvent9 room:( Room:2 managingAgent:room_agent2 type:teachingRoom format:amphi ))
+
+INFO - [ 1-8-11][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent20",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-20][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent29",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-21][user_agent4] Booking failed for event: eventReq("BrainstormEvent29",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-21][scheduler] No slot open to schedule event eventReq("BrainstormEvent29",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-30][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent35",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-30][user_agent5] Booking failed for event: eventReq("BrainstormEvent35",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-30][scheduler] No slot open to schedule event eventReq("BrainstormEvent35",brainstormEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-40][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent21",brainstormEvent,"2013_01_01_14_00_00","2013_01_01_15_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-40][user_agent2] I have booked event: (Event:2 type:brainstormEvent title:BrainstormEvent21 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-8-50][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent15",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-8-50][user_agent1] I have booked event: (Event:3 type:brainstormEvent title:BrainstormEvent15 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-9-0][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent43",meetingEvent,"2013_01_01_09_00_00","2013_01_01_10_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-0][user_agent6] I have booked event: (Event:4 type:meetingEvent title:MeetingEvent43 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-9-1][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent2",teachingEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",amphi,60,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-1][user_agent10] I have booked event: (Event:5 type:teachingEvent title:TeachingEvent2 room:( Room:2 managingAgent:room_agent2 type:teachingRoom format:amphi ))
+
+INFO - [ 1-9-2][room_agent2] Event starting: event(0,"TeachingEvent9",teachingEvent,9,10)
+
+INFO - [ 1-9-10][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent46",meetingEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-11][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent17",brainstormEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-11][user_agent5] I have booked event: (Event:6 type:meetingEvent title:MeetingEvent46 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-9-11][user_agent1] I have booked event: (Event:7 type:brainstormEvent title:BrainstormEvent17 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-9-20][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent26",brainstormEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-20][user_agent2] Booking failed for event: eventReq("BrainstormEvent26",brainstormEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-20][scheduler] No slot open to schedule event eventReq("BrainstormEvent26",brainstormEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-30][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent22",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-30][user_agent2] Booking failed for event: eventReq("BrainstormEvent22",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-30][scheduler] No slot open to schedule event eventReq("BrainstormEvent22",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-41][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent12",brainstormEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-41][user_agent6] I have booked event: (Event:8 type:brainstormEvent title:BrainstormEvent12 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-9-51][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent18",brainstormEvent,"2013_01_01_15_00_00","2013_01_01_16_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-9-51][user_agent7] I have booked event: (Event:9 type:brainstormEvent title:BrainstormEvent18 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-10-0][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent50",meetingEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-0][user_agent3] I have booked event: (Event:10 type:meetingEvent title:MeetingEvent50 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-10-1][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent7",teachingEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",amphi,60,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-1][user_agent1] I have booked event: (Event:11 type:teachingEvent title:TeachingEvent7 room:( Room:2 managingAgent:room_agent2 type:teachingRoom format:amphi ))
+
+INFO - [ 1-10-3][room_agent2] Event starting: event(5,"TeachingEvent2",teachingEvent,10,11)
+
+INFO - [ 1-10-10][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent55",meetingEvent,"2013_01_01_10_00_00","2013_01_01_11_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-10][user_agent4] I have booked event: (Event:12 type:meetingEvent title:MeetingEvent55 room:( Room:6 managingAgent:room_agent6 type:meetingRoom format:office ))
+
+INFO - [ 1-10-10][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent19",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-11][user_agent2] I have booked event: (Event:13 type:brainstormEvent title:BrainstormEvent19 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-10-20][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent31",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-20][user_agent3] Booking failed for event: eventReq("BrainstormEvent31",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-20][scheduler] No slot open to schedule event eventReq("BrainstormEvent31",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-30][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent36",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-30][user_agent4] Booking failed for event: eventReq("BrainstormEvent36",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-30][scheduler] No slot open to schedule event eventReq("BrainstormEvent36",brainstormEvent,"2013_01_01_11_00_00","2013_01_01_12_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-40][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent28",brainstormEvent,"2013_01_01_14_00_00","2013_01_01_15_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-40][user_agent3] Booking failed for event: eventReq("BrainstormEvent28",brainstormEvent,"2013_01_01_14_00_00","2013_01_01_15_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-40][scheduler] No slot open to schedule event eventReq("BrainstormEvent28",brainstormEvent,"2013_01_01_14_00_00","2013_01_01_15_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-50][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent37",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-50][user_agent3] Booking failed for event: eventReq("BrainstormEvent37",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-10-50][scheduler] No slot open to schedule event eventReq("BrainstormEvent37",brainstormEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-0][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent49",meetingEvent,"2013_01_01_16_00_00","2013_01_01_17_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-0][user_agent1] I have booked event: (Event:14 type:meetingEvent title:MeetingEvent49 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-11-1][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent6",teachingEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",lab,12,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-1][user_agent5] I have booked event: (Event:15 type:teachingEvent title:TeachingEvent6 room:( Room:4 managingAgent:room_agent4 type:teachingRoom format:lab ))
+
+INFO - [ 1-11-2][room_agent5] Event starting: event(6,"MeetingEvent46",meetingEvent,11,12)
+
+INFO - [ 1-11-3][room_agent9] Monitoring phase :: have noticed fault request_trend_growing(room_agent9,brainstorm_request,11,5,4,1,1)
+
+INFO - [ 1-11-3][room_agent2] Event starting: event(11,"TeachingEvent7",teachingEvent,11,12)
+
+INFO - [ 1-11-3][building_manager] RECEIVED NEW FAULT: request_trend_growing(room_agent9,brainstorm_request,11,5,4,1,1). STARTING REORG.
+
+INFO - [ 1-11-3][room_agent9] Event starting: event(13,"BrainstormEvent19",brainstormEvent,11,12)
+
+INFO - [ 1-11-3][building_manager] EXECUTING OEStop STAGE.
+
+INFO - [ 1-11-3][room_agent6] LEAVING ROLE: meeting_room_manager IN GROUP: room_manager_group
+
+INFO - [ 1-11-3][room_agent6] LEAVING ROLE: meeting_room_manager IN GROUP: meeting_group_room_agent6
+
+INFO - [ 1-11-3][building_manager] EXECUTING OSChange STAGE.
+
+INFO - [ 1-11-3][building_manager] EXECUTING OEStart STAGE.
+
+INFO - [ 1-11-3][room_agent6] ADOPTING ROLE: brainstorm_room_manager IN GROUP: room_manager_group
+
+INFO - [ 1-11-3][building_manager] REORGANIZATION COMPLETED.
+
+INFO - [ 1-11-4][room_agent5] Event starting: event(6,"MeetingEvent46",meetingEvent,11,12)
+
+INFO - [ 1-11-4][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent13",brainstormEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-4][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent44",meetingEvent,"2013_01_01_17_00_00","2013_01_01_18_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-4][user_agent6] I have booked event: (Event:16 type:brainstormEvent title:BrainstormEvent13 room:( Room:6 managingAgent:room_agent6 type:brainstormRoom format:office ))
+
+INFO - [ 1-11-4][user_agent5] I have booked event: (Event:17 type:meetingEvent title:MeetingEvent44 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-11-14][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent24",brainstormEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-14][user_agent7] I have booked event: (Event:18 type:brainstormEvent title:BrainstormEvent24 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-11-24][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent39",brainstormEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-24][user_agent8] Booking failed for event: eventReq("BrainstormEvent39",brainstormEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-24][scheduler] No slot open to schedule event eventReq("BrainstormEvent39",brainstormEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-34][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent23",brainstormEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-34][user_agent7] I have booked event: (Event:19 type:brainstormEvent title:BrainstormEvent23 room:( Room:6 managingAgent:room_agent6 type:brainstormRoom format:office ))
+
+INFO - [ 1-11-43][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent25",brainstormEvent,"2013_01_01_15_00_00","2013_01_01_16_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-44][user_agent8] I have booked event: (Event:20 type:brainstormEvent title:BrainstormEvent25 room:( Room:6 managingAgent:room_agent6 type:brainstormRoom format:office ))
+
+INFO - [ 1-11-54][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent45",meetingEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-11-54][user_agent9] I have booked event: (Event:21 type:meetingEvent title:MeetingEvent45 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-12-1][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent3",teachingEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",amphi,60,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-1][user_agent5] I have booked event: (Event:22 type:teachingEvent title:TeachingEvent3 room:( Room:2 managingAgent:room_agent2 type:teachingRoom format:amphi ))
+
+INFO - [ 1-12-2][room_agent9] Event starting: event(18,"BrainstormEvent24",brainstormEvent,12,13)
+
+INFO - [ 1-12-2][room_agent5] Event starting: event(21,"MeetingEvent45",meetingEvent,12,13)
+
+INFO - [ 1-12-3][room_agent4] Event starting: event(15,"TeachingEvent6",teachingEvent,12,13)
+
+INFO - [ 1-12-3][room_agent6] Event starting: event(16,"BrainstormEvent13",brainstormEvent,12,13)
+
+INFO - [ 1-12-3][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent52",meetingEvent,"2013_01_01_12_00_00","2013_01_01_13_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-4][user_agent10] I have booked event: (Event:23 type:meetingEvent title:MeetingEvent52 room:( Room:7 managingAgent:room_agent7 type:meetingRoom format:office ))
+
+INFO - [ 1-12-12][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent40",brainstormEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-12][user_agent8] Booking failed for event: eventReq("BrainstormEvent40",brainstormEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-12][scheduler] No slot open to schedule event eventReq("BrainstormEvent40",brainstormEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-21][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent14",brainstormEvent,"2013_01_01_18_00_00","2013_01_01_19_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-21][user_agent7] I have booked event: (Event:24 type:brainstormEvent title:BrainstormEvent14 room:( Room:6 managingAgent:room_agent6 type:brainstormRoom format:office ))
+
+INFO - [ 1-12-31][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent16",brainstormEvent,"2013_01_01_17_00_00","2013_01_01_18_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-31][user_agent2] I have booked event: (Event:25 type:brainstormEvent title:BrainstormEvent16 room:( Room:6 managingAgent:room_agent6 type:brainstormRoom format:office ))
+
+INFO - [ 1-12-40][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent11",brainstormEvent,"2013_01_01_16_00_00","2013_01_01_17_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-41][user_agent8] I have booked event: (Event:26 type:brainstormEvent title:BrainstormEvent11 room:( Room:6 managingAgent:room_agent6 type:brainstormRoom format:office ))
+
+INFO - [ 1-12-50][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent48",meetingEvent,"2013_01_01_13_00_00","2013_01_01_14_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-12-52][user_agent9] I have booked event: (Event:27 type:meetingEvent title:MeetingEvent48 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-13-0][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent47",meetingEvent,"2013_01_01_14_00_00","2013_01_01_15_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-0][user_agent4] I have booked event: (Event:28 type:meetingEvent title:MeetingEvent47 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-13-1][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent10",teachingEvent,"2013_01_01_15_00_00","2013_01_01_16_00_00",amphi,60,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-1][user_agent6] I have booked event: (Event:29 type:teachingEvent title:TeachingEvent10 room:( Room:2 managingAgent:room_agent2 type:teachingRoom format:amphi ))
+
+INFO - [ 1-13-2][room_agent2] Event starting: event(22,"TeachingEvent3",teachingEvent,13,14)
+
+INFO - [ 1-13-3][room_agent6] Event starting: event(19,"BrainstormEvent23",brainstormEvent,13,14)
+
+INFO - [ 1-13-11][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent4",teachingEvent,"2013_01_01_16_00_00","2013_01_01_17_00_00",lab,12,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-11][user_agent7] I have booked event: (Event:30 type:teachingEvent title:TeachingEvent4 room:( Room:4 managingAgent:room_agent4 type:teachingRoom format:lab ))
+
+INFO - [ 1-13-21][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent8",teachingEvent,"2013_01_01_18_00_00","2013_01_01_19_00_00",lab,12,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-21][user_agent6] I have booked event: (Event:31 type:teachingEvent title:TeachingEvent8 room:( Room:4 managingAgent:room_agent4 type:teachingRoom format:lab ))
+
+INFO - [ 1-13-31][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent1",teachingEvent,"2013_01_01_17_00_00","2013_01_01_18_00_00",amphi,60,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-31][user_agent1] I have booked event: (Event:32 type:teachingEvent title:TeachingEvent1 room:( Room:2 managingAgent:room_agent2 type:teachingRoom format:amphi ))
+
+INFO - [ 1-13-40][scheduler] Handling schedule request with event requirements: eventReq("TeachingEvent5",teachingEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",lab,12,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-41][user_agent10] I have booked event: (Event:33 type:teachingEvent title:TeachingEvent5 room:( Room:4 managingAgent:room_agent4 type:teachingRoom format:lab ))
+
+INFO - [ 1-13-50][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent32",brainstormEvent,"2013_01_01_16_00_00","2013_01_01_17_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-13-50][user_agent9] I have booked event: (Event:34 type:brainstormEvent title:BrainstormEvent32 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-14-0][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent30",brainstormEvent,"2013_01_01_18_00_00","2013_01_01_19_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-0][user_agent8] I have booked event: (Event:35 type:brainstormEvent title:BrainstormEvent30 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-14-10][scheduler] Handling schedule request with event requirements: eventReq("BrainstormEvent27",brainstormEvent,"2013_01_01_17_00_00","2013_01_01_18_00_00",office,6,hasBlackboard(false),hasProjector(false),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-10][user_agent3] I have booked event: (Event:36 type:brainstormEvent title:BrainstormEvent27 room:( Room:9 managingAgent:room_agent9 type:brainstormRoom format:office ))
+
+INFO - [ 1-14-20][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent53",meetingEvent,"2013_01_01_14_00_00","2013_01_01_15_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-20][user_agent5] I have booked event: (Event:37 type:meetingEvent title:MeetingEvent53 room:( Room:7 managingAgent:room_agent7 type:meetingRoom format:office ))
+
+INFO - [ 1-14-23][room_agent9] Monitoring phase :: have noticed fault request_trend_growing(room_agent9,brainstorm_request,14,3,0,1,1)
+
+INFO - [ 1-14-23][building_manager] RECEIVED NEW FAULT: request_trend_growing(room_agent9,brainstorm_request,14,3,0,1,1). STARTING REORG.
+
+INFO - [ 1-14-23][building_manager] EXECUTING OEStop STAGE.
+
+INFO - [ 1-14-23][room_agent8] LEAVING ROLE: meeting_room_manager IN GROUP: meeting_group_room_agent8
+
+INFO - [ 1-14-23][room_agent8] LEAVING ROLE: meeting_room_manager IN GROUP: room_manager_group
+
+INFO - [ 1-14-23][building_manager] EXECUTING OSChange STAGE.
+
+INFO - [ 1-14-23][building_manager] EXECUTING OEStart STAGE.
+
+INFO - [ 1-14-23][room_agent8] ADOPTING ROLE: brainstorm_room_manager IN GROUP: room_manager_group
+
+INFO - [ 1-14-23][building_manager] REORGANIZATION COMPLETED.
+
+INFO - [ 1-14-24][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent42",meetingEvent,"2013_01_01_18_00_00","2013_01_01_19_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-24][user_agent10] I have booked event: (Event:38 type:meetingEvent title:MeetingEvent42 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-14-34][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent56",meetingEvent,"2013_01_01_17_00_00","2013_01_01_18_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-34][user_agent6] I have booked event: (Event:39 type:meetingEvent title:MeetingEvent56 room:( Room:7 managingAgent:room_agent7 type:meetingRoom format:office ))
+
+INFO - [ 1-14-44][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent51",meetingEvent,"2013_01_01_19_00_00","2013_01_01_20_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-44][user_agent4] I have booked event: (Event:40 type:meetingEvent title:MeetingEvent51 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-14-54][scheduler] Handling schedule request with event requirements: eventReq("MeetingEvent41",meetingEvent,"2013_01_01_15_00_00","2013_01_01_16_00_00",any,10,hasBlackboard(false),hasProjector(true),hasTv(false),hasMic(false))
+
+INFO - [ 1-14-54][user_agent9] I have booked event: (Event:41 type:meetingEvent title:MeetingEvent41 room:( Room:5 managingAgent:room_agent5 type:meetingRoom format:common ))
+
+INFO - [ 1-15-2][room_agent2] Event starting: event(29,"TeachingEvent10",teachingEvent,15,16)
+
+INFO - [ 1-15-2][room_agent6] Event starting: event(20,"BrainstormEvent25",brainstormEvent,15,16)
+
+INFO - [ 1-15-3][room_agent9] Event starting: event(9,"BrainstormEvent18",brainstormEvent,15,16)
+
+INFO - [ 1-15-3][room_agent5] Event starting: event(41,"MeetingEvent41",meetingEvent,15,16)
+
+INFO - [ 1-18-3][room_agent6] Event starting: event(24,"BrainstormEvent14",brainstormEvent,18,19)
+
+INFO - [ 1-19-2][room_agent5] Event starting: event(40,"MeetingEvent51",meetingEvent,19,20)
+

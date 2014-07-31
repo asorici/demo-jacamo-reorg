@@ -1,0 +1,25 @@
+/*
+    Jason Project for the Room booking test scenario
+*/
+
+MAS room_booking_test {
+   infrastructure: Centralised
+
+   environment: c4jason.CartagoEnvironment
+
+   agents:
+       	building_manager agentArchClass c4jason.CAgentArch;
+       	scheduler  agentArchClass c4jason.CAgentArch; 
+		monitor  agentArchClass c4jason.CAgentArch;
+		room_agent  agentArchClass c4jason.CAgentArch #9;
+		user_agent  agentArchClass c4jason.CAgentArch #10;
+		participant agentArchClass c4jason.CAgentArch #3;
+	
+   classpath: "lib/cartago.jar"; 		// cartago: platform for artifacts
+              "lib/c4jason.jar"; 		// jason-cartago integration
+              "lib/jason.jar";			// jason: agent programming platform
+              "lib/moise.jar";			// moise: organization view platform
+              "lib/jacaarduino.jar";	// jacaarduino: artifacts for sensor management via arduino
+
+   aslSourcePath: "AmI-Room-Booking/src/roombooking/test/asl"; 
+}

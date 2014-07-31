@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="http://moise.sourceforge.net/xml/os.xsl" type="text/xsl" ?>
+
+<organisational-specification 
+
+    id="ami_room_booking"
+    os-version="0.8"
+  
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os
+                        http://moise.sourceforge.net/xml/os.xsd' >
+
+<structural-specification>
+    <role-definitions>
+        <role id="building_manager" />
+        <role id="scheduler" />
+        <role id="monitor" />
+        <role id="room_manager" />
+        <role id="teaching_room_manager">
+            <extends role="room_manager" />
+        </role>
+        <role id="meeting_room_manager">
+            <extends role="room_manager" />
+        </role>
+        <role id="brainstorm_room_manager">
+            <extends role="room_manager" />
+        </role>
+
+        <role id="presenter" />
+        <role id="participant" />
+        <role id="teaching_presenter">
+            <extends role="presenter" />
+        </role>
+        <role id="meeting_presenter">
+            <extends role="presenter" />
+        </role>
+        <role id="brainstorm_presenter">
+            <extends role="presenter" />
+        </role>
+        
+        <role id="teaching_participant">
+            <extends role="participant" />
+        </role>
+        <role id="meeting_participant">
+            <extends role="participant" />
+        </role>
+        <role id="brainstorm_participant">
+            <extends role="participant" />
+        </role>
+    </role-definitions>
+
+    <group-specification id="building_group" min="1" max="1">
+        <roles>
+            <role id="building_manager" min="1" max="1" />
+            <role id="scheduler" min="1" max="1" />
+            <role id="monitor" min="1" max="1" />
+        </roles>
+
+        <sub-groups>
+            <group-specification id="room_manager_group" min="1" max="1">
+                <roles>
+                    <role id="teaching_room_manager" min="4" max="20" />
+                    <role id="meeting_room_manager" min="4" max="20" />
+                    <role id="brainstorm_room_manager" min="1" max="20" />
+                </roles>
+            </group-specification>
+
+            <group-specification id="teaching_group" min="4" max="20">
+                <roles>
+                    <role id="teaching_room_manager" min="1" max="1" />
+                    <role id="teaching_presenter" min="0" max="1" />
+                    <role id="teaching_participant" min="0" max="100" />
+                </roles>
+
+                <!--
+                <links>
+                    <link from="teaching_room_manager" to="presenter" type="communication" scope="intra-group" extends-sub-groups="false" 
+                    bi-dir="true" />
+                    <link from="teaching_room_manager" to="participant" type="communication" scope="intra-group" extends-sub-groups="false" 
+                    bi-dir="true" />
+                </links>
+                -->
+            </group-specification>
+
+            <group-specification id="meeting_group" min="4" max="20">
+                <roles>
+                    <role id="meeting_room_manager" min="1" max="1" />
+                    <role id="meeting_presenter" min="0" max="1" />
+                    <role id="meeting_participant" min="0" max="10" />
+                </roles>
+
+                <!--
+                <links>
+                    <link from="meeting_room_manager" to="presenter" type="communication" scope="intra-group" extends-sub-groups="false" 
+                    bi-dir="true" />
+                    <link from="meeting_room_manager" to="participant" type="communication" scope="intra-group" extends-sub-groups="false" 
+                    bi-dir="true" />
+                </links>
+                -->
+            </group-specification>
+
+            <group-specification id="brainstorm_group" min="1" max="20">
+                <roles>
+                    <role id="brainstorm_room_manager" min="1" max="1" />
+                    <role id="brainstorm_presenter" min="0" max="1" />
+                    <role id="brainstorm_participant" min="0" max="10" />
+                </roles>
+
+                <!--
+                <links>
+                    <link from="brainstorm_room_manager" to="presenter" type="communication" scope="intra-group" extends-sub-groups="false" 
+                    bi-dir="true" />
+                    <link from="brainstorm_room_manager" to="participant" type="communication" scope="intra-group" extends-sub-groups="false" 
+                    bi-dir="true" />
+                </links>
+                -->
+            </group-specification>
+        </sub-groups>
+
+        <!--
+        <links>
+            <link from="building_manager" to="scheduler" type="authority" scope="intra-group" extends-sub-groups="false" bi-dir="false" />
+            <link from="building_manager" to="monitor" type="authority" scope="intra-group" extends-sub-groups="false" bi-dir="false" />
+            <link from="building_manager" to="room_manager" type="authority" scope="inter-group" extends-sub-groups="false" bi-dir="false" />
+
+            <link from="scheduler" to="room_manager" type="communication" scope="inter-group" extends-sub-groups="false" bi-dir="true" />
+            <link from="monitor" to="room_manager" type="communication" scope="inter-group" extends-sub-groups="false" bi-dir="true" />
+        </links>
+        -->
+
+        <formation-constraints>
+            <compatibility from="scheduler" to="building_manager" type="compatibility" 
+                           scope="intra-group" extends-sub-groups="false" 
+                           bi-dir="false"/>
+            <compatibility from="monitor" to="building_manager" type="compatibility" 
+                           scope="intra-group" extends-sub-groups="false" 
+                           bi-dir="false"/>
+        </formation-constraints>
+    </group-specification>
+    
+</structural-specification>
+
+<functional-specification>
+    <scheme id="manage_building_sch">
+        <goal id="manage_building">
+            <plan operator="parallel">
+                <goal id="manage_rooms">
+                    <plan operator="parallel">
+                        <goal id="manage_teaching_room">
+                            <plan operator="parallel">
+                                <goal id="manage_teaching_events" type="maintenance" />
+                                <goal id="monitor_teaching_room">
+                                    <plan operator="parallel">
+                                        <goal id="monitor_teaching_equipment" type="maintenance" />
+                                        <goal id="monitor_teaching_energy" type="maintenance" />
+                                    </plan>
+                                </goal>
+                            </plan>
+                        </goal>
+
+                        <goal id="manage_meeting_room">
+                            <plan operator="parallel">
+                                <goal id="manage_meeting_events" type="maintenance" />
+                                <goal id="monitor_meeting_room">
+                                    <plan operator="parallel">
+                                        <goal id="monitor_meeting_equipment" type="maintenance" />
+                                        <goal id="monitor_meeting_energy" type="maintenance" />
+                                    </plan>
+                                </goal>
+                            </plan>
+                        </goal>
+
+                        <goal id="manage_brainstorm_room">
+                            <plan operator="parallel">
+                                <goal id="manage_brainstorm_events" type="maintenance" />
+                                <goal id="monitor_brainstorm_room">
+                                    <plan operator="parallel">
+                                        <goal id="monitor_brainstorm_equipment" type="maintenance" />
+                                        <goal id="monitor_brainstorm_energy" type="maintenance" />
+                                    </plan>
+                                </goal>
+                            </plan>
+                        </goal>
+                    </plan>
+                </goal>
+
+                <goal id="manage_schedule">
+                    <plan operator="parallel">
+                        <goal id="manage_event_schedule_request" type="maintenance" />
+                        <goal id="manage_event_delete_request" type="maintenance" />
+                        <goal id="manage_event_modification_request" type="maintenance" />
+                    </plan>
+                </goal>
+
+                <!--
+                <goal id="monitor_building">
+                    <plan operator="parallel">
+                        <goal id="monitor_requests" type="maintenance" />
+                        <goal id="monitor_energy" type="maintenance" />
+                    </plan>
+                </goal>
+                -->
+            </plan>
+        </goal>
+
+        <!--
+        <mission id="building_management" min="1" max="1">
+            <goal id="manage_building" />
+        </mission>
+        -->
+        
+        <mission id="teaching_room_management" min="4" max="20">
+            <goal id="manage_teaching_events" />
+            <goal id="monitor_teaching_equipment" />
+            <goal id="monitor_teaching_energy" />
+        </mission>
+
+        <mission id="meeting_room_management" min="4" max="20">
+            <goal id="manage_meeting_events" />
+            <goal id="monitor_meeting_equipment" />
+            <goal id="monitor_meeting_energy" />
+        </mission>
+
+        <mission id="brainstorm_room_management" min="1" max="20">
+            <goal id="manage_brainstorm_events" />
+            <goal id="monitor_brainstorm_equipment" />
+            <goal id="monitor_brainstorm_energy" />
+        </mission>
+
+        <mission id="schedule_management" min="1" max="1">
+            <!-- <goal id="manage_schedule" /> -->
+            <goal id="manage_event_schedule_request" />
+            <goal id="manage_event_delete_request" />
+            <goal id="manage_event_modification_request" />
+            <!-- <goal id="manage_event_participation_request" /> -->
+        </mission>
+
+        <!--
+        <mission id="monitoring_management" min="1" max="1">
+            <goal id="monitor_requests" />
+            <goal id="monitor_energy" />
+        </mission>
+        -->
+        
+    </scheme>
+</functional-specification>
+
+<normative-specification>
+    <!-- <norm id="org_instantiation" type="obligation" role="building_manager" mission="building_management" /> -->
+    <norm id="org_scheduling" type="obligation" role="scheduler" mission="schedule_management" />
+
+    <!-- <norm id="org_monitoring" type="obligation" role="monitor" mission="monitoring_management" /> -->
+
+    <norm id="org_teaching_room_management" type="obligation" role="teaching_room_manager" mission="teaching_room_management" />
+    <norm id="org_meeting_room_management" type="obligation" role="meeting_room_manager" mission="meeting_room_management" />
+    <norm id="org_brainstorm_room_management" type="obligation" role="brainstorm_room_manager" mission="brainstorm_room_management" />
+</normative-specification>
+
+</organisational-specification>
+
+

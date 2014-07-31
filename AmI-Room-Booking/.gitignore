@@ -1,0 +1,10 @@
+bin
+*.relo
+*.png
+*.chrono
+*.log
+.classpath
+.project
+.settings
+
+
